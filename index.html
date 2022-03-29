@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Javascript notes</title>
+</head>
+<body>
+	<h1>Javascript notes</h1>
+	<p><button onclick="sayHello()">Click me!</button></p>
+	<hr/>
+	<p>
+		<input type="text" name="name" placeholder="Enter your name" id="nameInput"/>
+		<input type="number" name="age" placeholder="Enter your age" id="ageInput"/>
+		<button onclick="greetUser()">Greet user</button>
+		</p>
+		<p id="message">
+		</p>
+<script type="text/javascript">
+	
+
+
+   function sayHello(){
+   	alert("Hello World");
+   }
+
+   function greetUser(){
+
+var username = document.getElementById("nameInput").value;
+   	var age = document.getElementById("ageInput").value;
+   	var salutation = "";
+
+   	if (age < 30) {
+   		salutation = "Adik";
+   	}
+   	else if (age < 50){
+   		salutation = "Bro/Sis";
+   	}
+   	else{
+   		salutation = "Uncle/Aunty";
+   	}
+
+   	var hellomessage = "Hello" +salutation+ username+ " you are" +age+ " years old";
+   	document.getElementById("message").innerHTML = hellomessage
+
+    }
+   	
+
+
+</script>
+</body>
+</html>
